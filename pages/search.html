@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- include partials/head.html -->
+  </head>
+  <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div id="app" class="app-root">
+      <!-- include partials/header.html -->
+      <div class="app-body app-body--map" id="main" tabindex="-1">
+        <aside class="panel-left">
+          <div class="panel-left-header">
+            <span class="panel-left-title">위치 검색</span>
+            <button type="button" class="panel-left-close" data-panel-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="panel-left-body">
+            <div class="form-group">
+              <div class="filter-row">
+                <div class="filter-cell">
+                  <label class="form-label-sm" for="search-sigungu">시군</label>
+                  <select class="select-native" id="search-sigungu">
+                    <option value="">전체</option>
+                    <option>안동시</option>
+                    <option>영양군</option>
+                    <option>포항시</option>
+                  </select>
+                </div>
+                <div class="filter-cell">
+                  <label class="form-label-sm" for="search-eup">읍면동</label>
+                  <select class="select-native" id="search-eup">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+                <div class="filter-cell">
+                  <label class="form-label-sm" for="search-ri">리</label>
+                  <select class="select-native" id="search-ri">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label-sm" for="search-address">검색</label>
+                <div class="input-group">
+                  <input type="text" class="input-text" id="search-address" placeholder="주소 또는 장소 검색" />
+                  <span class="input-group-append">
+                    <button type="button" class="btn-primary btn-search" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <main class="map-wrap">
+          <div class="map-breadcrumb">
+            <span class="map-breadcrumb-text">경기도 &gt; 안양시 동안구 &gt; 관양동</span>
+          </div>
+          <div id="map-container" class="map-container">
+            <span class="map-placeholder">지도 영역</span>
+          </div>
+        </main>
+        <aside class="panel-right" aria-label="지도 도구">
+          <div class="tool-item-wrap"><button type="button" class="tool-btn active" title="주제도"><i class="fa-solid fa-layer-group"></i><span>주제도</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="3D"><i class="fa-solid fa-cube"></i><span>3D</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="거리"><i class="fa-solid fa-ruler-horizontal"></i><span>거리</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="면적"><i class="fa-regular fa-square"></i><span>면적</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="표고"><i class="fa-solid fa-mountain-sun"></i><span>표고</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="반경"><i class="fa-solid fa-bullseye"></i><span>반경</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="그리기"><i class="fa-solid fa-pencil"></i><span>그리기</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="인쇄"><i class="fa-solid fa-print"></i><span>인쇄</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="저장"><i class="fa-regular fa-floppy-disk"></i><span>저장</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="로드뷰"><i class="fa-solid fa-camera"></i><span>로드뷰</span></button></div>
+          <div class="tool-item-wrap"><button type="button" class="tool-btn" title="정보보기"><i class="fa-solid fa-circle-info"></i><span>정보보기</span></button></div>
+          <div class="tool-divider"></div>
+          <div class="tool-zoom-wrap">
+            <button type="button" class="tool-btn tool-btn-zoom" title="확대"><i class="fa-solid fa-plus"></i></button>
+            <div class="tool-zoom-slider-wrap">
+              <input type="range" class="tool-zoom-slider" min="1" max="20" value="10" orient="vertical" aria-label="줌 레벨" />
+            </div>
+            <button type="button" class="tool-btn tool-btn-zoom" title="축소"><i class="fa-solid fa-minus"></i></button>
+          </div>
+        </aside>
+      </div>
+      <!-- include partials/footer.html -->
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

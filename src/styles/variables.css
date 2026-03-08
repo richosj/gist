@@ -1,0 +1,21 @@
+/* 한 가지 감성: 잔잔한 하늘·물·전통 누각 이미지에서 딴 여유로운 톤 (테마 없음) */
+:root {
+  --color-primary: #0d9488;
+  --color-primary-hover: #0f766e;
+  --color-surface: #fafbfc;
+  --color-surface-panel: #f0f9ff;
+  --color-border: #bae6fd;
+  --color-border-soft: #e0f2fe;
+  --color-text: #1e3a3a;
+  --color-text-muted: #5a7a7a;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fef2f2;
+  --header-bg: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  --header-text: #ffffff;
+  --footer-bg: #0f766e;
+  --footer-text: #ccfbf1;
+  --body-bg: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 25%, #fafbfc 60%, #ffffff 100%);
+  --panel-header-bg: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  --shadow-soft: 0 2px 8px rgba(13, 148, 136, 0.06);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+}

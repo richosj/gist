@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- include partials/head.html -->
+  </head>
+  <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div id="app" class="app-root">
+      <!-- include partials/header.html -->
+      <div class="app-body app-body--map" id="main" tabindex="-1">
+        <aside class="panel-left">
+          <div class="panel-left-header">
+            <span class="panel-left-title">주제도 자료제공</span>
+            <div class="panel-header-actions">
+              <button type="button" class="btn-secondary btn-sm">초기화</button>
+              <button type="button" class="panel-left-close" data-panel-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+          <div class="panel-left-body">
+            <p class="panel-intro">공공데이터 요청 및 다운로드. 데이터를 사용하려면 먼저 [자료요청]을 진행해 주세요. 관리자 승인 후 다운로드가 활성화됩니다.</p>
+            <div class="data-list-item">
+              <span class="data-list-item-title">연속지적도 (SHP)</span>
+              <span class="data-list-item-meta">1.2GB · 2023.10.15</span>
+              <button type="button" class="btn-primary btn-sm btn-block btn-download-secure" data-id="1">다운로드 (보안서약)</button>
+            </div>
+            <div class="data-list-item">
+              <span class="data-list-item-title">건물 데이터 (법정동)</span>
+              <span class="data-list-item-meta">450MB · 2023.09.20</span>
+              <button type="button" class="btn-primary btn-sm btn-block btn-download-secure" data-id="2">다운로드 (보안서약)</button>
+            </div>
+            <div class="data-list-item">
+              <span class="data-list-item-title">토지이용계획 (DXF)</span>
+              <span class="data-list-item-meta">890MB · 2023.11.01</span>
+              <button type="button" class="btn-secondary btn-sm btn-block">자료 요청하기</button>
+            </div>
+          </div>
+        </aside>
+        <main class="map-wrap">
+          <div class="map-container"><span class="map-placeholder">지도 영역</span></div>
+          <!-- include partials/map-controls.html -->
+        </main>
+      </div>
+      <!-- include partials/footer.html -->
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

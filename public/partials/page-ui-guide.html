@@ -1,0 +1,234 @@
+<section id="page-ui-guide" class="page page-active">
+  <div class="ui-guide-inner">
+    <h1 class="ui-guide-title">UI 컴포넌트 가이드</h1>
+    <p class="ui-guide-desc">복사해서 사용할 수 있는 HTML 조각입니다. THEME별로 스타일이 바뀝니다.</p>
+
+    <nav class="ui-guide-toc" aria-label="가이드 목차">
+      <span class="form-label-sm">목차</span>
+      <a href="#guide-buttons">버튼</a>
+      <a href="#guide-forms">폼</a>
+      <a href="#guide-input-group">입력 그룹</a>
+      <a href="#guide-range">범위 슬라이더</a>
+      <a href="#guide-tabs">탭</a>
+      <a href="#guide-alerts">알림</a>
+      <a href="#guide-badge">배지</a>
+      <a href="#guide-table">테이블</a>
+      <a href="#guide-breadcrumb">브레드크럼</a>
+      <a href="#guide-progress">프로그레스</a>
+      <a href="#guide-pagination">페이징</a>
+      <a href="#guide-card">카드</a>
+      <a href="#guide-panel">패널</a>
+      <a href="#guide-datalist">데이터 목록</a>
+      <a href="#guide-modal">모달</a>
+    </nav>
+
+    <h2 class="ui-guide-h2" id="guide-buttons">버튼</h2>
+    <div class="ui-guide-block">
+      <button type="button" class="btn-primary">기본 버튼</button>
+      <button type="button" class="btn-secondary">보조 버튼</button>
+      <button type="button" class="btn-primary btn-sm">작은 버튼</button>
+      <button type="button" class="btn-secondary btn-sm">작은 보조</button>
+      <button type="button" class="btn-primary btn-search"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> 검색</button>
+      <button type="button" class="btn-secondary" disabled>비활성 버튼</button>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-forms">폼 요소</h2>
+    <div class="ui-guide-block" style="flex-direction: column; align-items: stretch; max-width: 360px;">
+      <div class="form-group">
+        <label class="form-label" for="ex-input">레이블</label>
+        <input type="text" class="input-text" id="ex-input" placeholder="입력 예시" />
+      </div>
+      <div class="form-group">
+        <label class="form-label-sm" for="ex-select">선택 목록</label>
+        <select class="select-native" id="ex-select">
+          <option value="">선택</option>
+          <option>옵션 1</option>
+          <option>옵션 2</option>
+        </select>
+      </div>
+      <div class="form-group flex flex-wrap gap-x-6 gap-y-2">
+        <label class="form-check">
+          <input type="checkbox" />
+          <span>체크박스</span>
+        </label>
+        <label class="form-radio">
+          <input type="radio" name="ex-r" />
+          <span>라디오 1</span>
+        </label>
+        <label class="form-radio">
+          <input type="radio" name="ex-r" />
+          <span>라디오 2</span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="ex-textarea">텍스트 영역</label>
+        <textarea class="input-text" id="ex-textarea" rows="3" placeholder="여러 줄 입력"></textarea>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-input-group">입력 그룹 (Addon)</h2>
+    <div class="ui-guide-block" style="flex-direction: column; align-items: stretch; max-width: 400px;">
+      <div class="form-group">
+        <label class="form-label-sm">앞에 단위 (prepend)</label>
+        <div class="input-group">
+          <span class="input-group-prepend input-group-text">https://</span>
+          <input type="text" class="input-text" placeholder="도메인 입력" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label-sm">뒤에 버튼 (append)</label>
+        <div class="input-group">
+          <input type="text" class="input-text" placeholder="검색어" />
+          <span class="input-group-append">
+            <button type="button" class="btn-primary btn-sm">검색</button>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label-sm">앞뒤 모두</label>
+        <div class="input-group">
+          <span class="input-group-prepend input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="text" class="input-text" placeholder="주소 또는 장소 검색" />
+          <span class="input-group-append">
+            <button type="button" class="btn-primary btn-sm"><i class="fa-solid fa-arrow-right"></i></button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-range">범위 슬라이더 (Range)</h2>
+    <div class="ui-guide-block" style="flex-direction: column; align-items: stretch; max-width: 320px;">
+      <div class="range-wrap">
+        <label class="form-label-sm" for="ex-range">반경 (m)</label>
+        <input type="range" class="input-range" id="ex-range" min="100" max="2000" value="500" step="100" />
+        <output class="range-value" for="ex-range">500 m</output>
+      </div>
+      <div class="range-wrap">
+        <label class="form-label-sm" for="ex-range2">투명도</label>
+        <input type="range" class="input-range" id="ex-range2" min="0" max="100" value="80" />
+        <output class="range-value" for="ex-range2">80 %</output>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-tabs">탭</h2>
+    <div class="tabs-wrap">
+      <div class="tabs-header">
+        <button type="button" class="tab-btn active">검색어로 찾기</button>
+        <button type="button" class="tab-btn">분류별 찾기</button>
+      </div>
+      <div class="tabs-body tabs-body-active">
+        <p class="panel-intro">첫 번째 탭: 검색어로 찾기 내용입니다.</p>
+      </div>
+      <div class="tabs-body">
+        <p class="panel-intro">두 번째 탭: 분류별 찾기 내용입니다.</p>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-alerts">알림</h2>
+    <div class="ui-guide-block" style="flex-direction: column; align-items: stretch;">
+      <div class="alert-danger">
+        <span class="alert-icon">!</span>
+        <span>경고 메시지 예시입니다.</span>
+      </div>
+      <div class="alert-success">
+        <span>✓</span>
+        <span>성공 메시지 예시입니다.</span>
+      </div>
+      <div class="alert-info">
+        <span>ℹ</span>
+        <span>안내 메시지 예시입니다.</span>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-badge">배지</h2>
+    <div class="ui-guide-block">
+      <span class="badge">기본</span>
+      <span class="badge-secondary">보조</span>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-table">테이블</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>자료명</th>
+            <th>용량</th>
+            <th>등록일</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>연속지적도 (SHP)</td><td>1.2GB</td><td>2023.10.15</td><td>—</td></tr>
+          <tr><td>건물 데이터 (법정동)</td><td>450MB</td><td>2023.09.20</td><td>—</td></tr>
+          <tr><td>토지이용계획 (DXF)</td><td>890MB</td><td>2023.11.01</td><td>요청 대기</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-breadcrumb">브레드크럼</h2>
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="#">홈</a>
+      <span>/</span>
+      <a href="#">공간정보</a>
+      <span>/</span>
+      <span>주제도</span>
+    </nav>
+
+    <h2 class="ui-guide-h2" id="guide-progress">프로그레스</h2>
+    <div class="progress-wrap">
+      <div class="progress-bar" style="width: 60%;"></div>
+    </div>
+    <label class="form-label-sm">진행률 60%</label>
+
+    <h2 class="ui-guide-h2" id="guide-pagination">페이징</h2>
+    <div class="pagination-wrap pagination-flat" data-pagination-total="12">
+      <button type="button" class="pagination-btn" data-pagination="first" title="첫 페이지"><i class="fa-solid fa-angles-left"></i></button>
+      <button type="button" class="pagination-btn" data-pagination="prev" title="이전"><i class="fa-solid fa-chevron-left"></i></button>
+      <span class="pagination-text">3 / 12</span>
+      <button type="button" class="pagination-btn" data-pagination="next" title="다음"><i class="fa-solid fa-chevron-right"></i></button>
+      <button type="button" class="pagination-btn" data-pagination="last" title="마지막"><i class="fa-solid fa-angles-right"></i></button>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-card">카드</h2>
+    <div class="card" style="max-width: 320px;">
+      <div class="card-header">카드 제목</div>
+      <div class="card-body">카드 본문입니다. 목록, 요약 등에 사용합니다.</div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-panel">패널 (좌측)</h2>
+    <div class="panel-left" style="width: 280px; min-width: 280px;">
+      <div class="panel-left-header">
+        <span class="panel-left-title">패널 제목</span>
+        <button type="button" class="panel-left-close" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="panel-left-body">
+        <p class="panel-intro">패널 본문입니다.</p>
+        <button type="button" class="btn-primary btn-sm">확인</button>
+      </div>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-datalist">데이터 목록</h2>
+    <div class="data-list-item">
+      <span class="data-list-item-title">연속지적도 (SHP)</span>
+      <span class="data-list-item-meta">1.2GB · 2023.10.15</span>
+      <button type="button" class="btn-primary btn-sm btn-block">다운로드</button>
+    </div>
+
+    <h2 class="ui-guide-h2" id="guide-modal">모달 (마크업)</h2>
+    <p class="panel-intro">모달은 JS로 열 때 백드롭 + 이 마크업을 body에 넣어 사용합니다.</p>
+    <button type="button" class="btn-primary btn-sm" id="btn-open-demo-modal">보안각서 모달 열기 (데모)</button>
+    <div class="modal-backdrop" id="modal-demo" hidden>
+      <div class="modal-box" role="document">
+        <div class="modal-header">
+          <h2 class="modal-title">모달 제목</h2>
+          <button type="button" class="modal-close-btn" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">본문</div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary">취소</button>
+          <button type="button" class="btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

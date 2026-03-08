@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- include partials/head.html -->
+  </head>
+  <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div id="app" class="app-root">
+      <!-- include partials/header.html -->
+      <div class="app-body app-body--map" id="main" tabindex="-1">
+        <aside class="panel-left">
+          <div class="panel-left-header">
+            <span class="panel-left-title">토지(임야) 검색</span>
+            <button type="button" class="panel-left-close" data-panel-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="panel-left-body">
+            <div class="form-group">
+              <label class="form-label-sm" for="land-sido">시/도</label>
+              <select class="select-native" id="land-sido">
+                <option>경상북도</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label-sm" for="land-sigungu">시/군/구</label>
+              <select class="select-native" id="land-sigungu">
+                <option>문경시</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label-sm" for="land-dong">/면/동</label>
+              <select class="select-native" id="land-dong">
+                <option>점촌동</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label-sm">유형</label>
+              <div class="flex flex-wrap gap-x-6 gap-y-2">
+                <label class="form-radio">
+                  <input type="radio" name="land-type" checked />
+                  <span>일반</span>
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="land-type" />
+                  <span>산</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group search-row">
+              <div class="filter-cell">
+                <label class="form-label-sm" for="land-bon">본번</label>
+                <input type="text" class="input-text" id="land-bon" />
+              </div>
+              <span class="land-hyphen">-</span>
+              <div class="filter-cell">
+                <label class="form-label-sm" for="land-bu">부번</label>
+                <input type="text" class="input-text" id="land-bu" />
+              </div>
+            </div>
+            <button type="button" class="btn-primary btn-search btn-block" id="land-search-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> 검색하기</button>
+            <p class="form-hint">도로명 주소 검색은 상단 탭을 변경하여 이용해 주세요.</p>
+            <p class="form-hint">*정확한 지번을 입력하셔야 상세 정보 조회가 가능합니다.</p>
+          </div>
+        </aside>
+        <main class="map-wrap">
+          <div class="map-container"><span class="map-placeholder">지도 영역</span></div>
+          <!-- include partials/map-controls.html -->
+        </main>
+      </div>
+      <!-- include partials/footer.html -->
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

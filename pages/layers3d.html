@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- include partials/head.html -->
+  </head>
+  <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div id="app" class="app-root">
+      <!-- include partials/header.html -->
+      <div class="app-body app-body--map" id="main" tabindex="-1">
+        <aside class="panel-left">
+          <div class="panel-left-header">
+            <span class="panel-left-title">3차원 가시화</span>
+            <div class="panel-header-actions">
+              <button type="button" class="panel-left-close panel-left-close-icon" title="새로고침"><i class="fa-solid fa-arrows-rotate"></i></button>
+              <button type="button" class="panel-left-close" data-panel-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+          <div class="panel-left-body">
+            <div class="layer-tree-header">
+              <span class="count"><i class="fa-solid fa-layer-group"></i> 402건</span>
+              <button type="button" class="btn-secondary btn-sm"><i class="fa-solid fa-angles-down"></i> 모두 열기</button>
+            </div>
+            <div class="layer-tree">
+              <div class="layer-tree-branch" data-branch="base">
+                <div class="layer-tree-head">
+                  <button type="button" class="layer-tree-toggle" aria-expanded="true" data-branch="base">
+                    <i class="fa-solid fa-chevron-down layer-tree-chevron"></i>
+                  </button>
+                  <label class="layer-tree-row" for="ly-3d">
+                    <input type="checkbox" class="form-check-input" id="ly-3d" checked />
+                    <span class="layer-tree-icon"><i class="fa-solid fa-cube"></i></span>
+                    <span class="layer-tree-label">3D 지도</span>
+                  </label>
+                </div>
+              </div>
+              <div class="layer-tree-branch" data-branch="terrain">
+                <div class="layer-tree-head">
+                  <button type="button" class="layer-tree-toggle" aria-expanded="true" data-branch="terrain">
+                    <i class="fa-solid fa-chevron-down layer-tree-chevron"></i>
+                  </button>
+                  <label class="layer-tree-row" for="ly-terrain">
+                    <input type="checkbox" class="form-check-input" id="ly-terrain" checked />
+                    <span class="layer-tree-icon"><i class="fa-solid fa-mountain-sun"></i></span>
+                    <span class="layer-tree-label">지형</span>
+                  </label>
+                </div>
+                <div class="layer-tree-children">
+                  <label class="layer-tree-row layer-tree-row--child" for="ly-aerial">
+                    <span class="layer-tree-spacer"></span>
+                    <input type="checkbox" class="form-check-input" id="ly-aerial" checked />
+                    <span class="layer-tree-icon"><i class="fa-solid fa-satellite-dish"></i></span>
+                    <span class="layer-tree-label">항공영상</span>
+                  </label>
+                </div>
+              </div>
+              <div class="layer-tree-branch" data-branch="building">
+                <div class="layer-tree-head">
+                  <button type="button" class="layer-tree-toggle" aria-expanded="true" data-branch="building">
+                    <i class="fa-solid fa-chevron-down layer-tree-chevron"></i>
+                  </button>
+                  <label class="layer-tree-row" for="ly-building">
+                    <input type="checkbox" class="form-check-input" id="ly-building" checked />
+                    <span class="layer-tree-icon"><i class="fa-solid fa-building"></i></span>
+                    <span class="layer-tree-label">건물 3D</span>
+                  </label>
+                </div>
+                <div class="layer-tree-children">
+                  <label class="layer-tree-row layer-tree-row--child" for="ly-gb3d">
+                    <span class="layer-tree-spacer"></span>
+                    <input type="checkbox" class="form-check-input" id="ly-gb3d" checked />
+                    <span class="layer-tree-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+                    <span class="layer-tree-label">경북3D모델 서비스</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <main class="map-wrap">
+          <div class="map-container"><span class="map-placeholder">지도 영역</span></div>
+          <!-- include partials/map-controls.html -->
+        </main>
+      </div>
+      <!-- include partials/footer.html -->
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
