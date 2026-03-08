@@ -26,6 +26,7 @@ function htmlIncludePlugin() {
 
 export default defineConfig({
   root: '.',
+  base: '/gist/', // GitHub Pages: https://richosj.github.io/gist/
   publicDir: 'public',
   plugins: [htmlIncludePlugin()],
   build: {
