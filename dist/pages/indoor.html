@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/gist/vite.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>경북 지능공간정보 플랫폼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="module" crossorigin src="/gist/assets/main-BQAxMC-k.js"></script>
+    <link rel="stylesheet" crossorigin href="/gist/assets/main-DZyYC4tj.css">
+  </head>
+  <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div id="app" class="app-root">
+      <header class="app-header">
+  <div class="header-inner">
+    <div class="header-logo">경북 지능공간정보 플랫폼</div>
+    <nav class="header-nav">
+      <a href="/gist/" class="nav-item" data-page="ui-guide">UI 가이드</a>
+      <a href="/gist/pages/search.html" class="nav-item" data-page="search">검색</a>
+      <a href="/gist/pages/indoor.html" class="nav-item" data-page="indoor">실내지도</a>
+      <a href="/gist/pages/land.html" class="nav-item" data-page="land">토지(임야) 검색</a>
+      <a href="/gist/pages/dataprovide.html" class="nav-item" data-page="dataprovide">자료제공</a>
+      <a href="/gist/pages/layers3d.html" class="nav-item" data-page="layers3d">3차원 가시화</a>
+      <a href="/gist/pages/mydata.html" class="nav-item" data-page="mydata">마이데이터</a>
+    </nav>
+  </div>
+</header>
+
+      <div class="app-body app-body--map" id="main" tabindex="-1">
+        <aside class="panel-left">
+          <div class="panel-left-header">
+            <span class="panel-left-title">실내지도</span>
+            <button type="button" class="panel-left-close" data-panel-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="panel-left-body">
+            <p class="panel-intro">다중 반경 (multi-Ring) 영향권 분석</p>
+            <p class="panel-intro">해당지역의 생활 편의시설 접근성 진단.</p>
+            <button type="button" class="btn-secondary btn-sm">사용법 및 산출방식</button>
+            <div class="form-group">
+              <label class="form-label-sm">기준점 설정</label>
+              <input type="text" class="input-text" placeholder="경상북도 포항시 남구 시청로 1" />
+              <p class="form-hint">지도 클릭으로 위치 설정</p>
+            </div>
+            <div class="facility-list">
+              <div class="data-list-item facility-item" data-facility="419">
+                <span class="data-list-item-title">4.19기념관</span>
+                <span class="data-list-item-meta">건물 &gt; 공공문화시설</span>
+              </div>
+              <div class="data-list-item facility-item">
+                <span class="data-list-item-title">강남역</span>
+                <span class="data-list-item-meta">교통시설 &gt; 지하철역</span>
+              </div>
+            </div>
+            <div class="pagination-wrap" data-pagination-total="16">
+              <button type="button" class="pagination-btn" data-pagination="prev" title="이전"><i class="fa-solid fa-chevron-left"></i></button>
+              <span class="pagination-text">1 / 16</span>
+              <button type="button" class="pagination-btn" data-pagination="next" title="다음"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </aside>
+        <main class="map-wrap">
+          <div class="map-container"><span class="map-placeholder">지도 영역</span></div>
+          <div class="map-controls" aria-label="지도 컨트롤">
+  <button type="button" class="map-ctrl-btn" data-map-ctrl="zoomIn" title="확대" aria-label="확대"><i class="fa-solid fa-plus"></i></button>
+  <button type="button" class="map-ctrl-btn" data-map-ctrl="zoomOut" title="축소" aria-label="축소"><i class="fa-solid fa-minus"></i></button>
+  <div class="map-ctrl-divider"></div>
+  <div class="map-ctrl-wrap map-ctrl-has-popover">
+    <button type="button" class="map-ctrl-btn" data-map-ctrl="layer" title="지도 유형" aria-expanded="false" aria-haspopup="true"><i class="fa-solid fa-layer-group"></i></button>
+    <div class="map-ctrl-popover" role="menu" hidden>
+      <button type="button" class="map-ctrl-popover-item" data-layer="map"><i class="fa-solid fa-map"></i><span>지도</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-layer="satellite"><i class="fa-solid fa-satellite"></i><span>위성</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-layer="terrain"><i class="fa-solid fa-mountain-sun"></i><span>지형</span></button>
+    </div>
+  </div>
+  <div class="map-ctrl-wrap map-ctrl-has-popover">
+    <button type="button" class="map-ctrl-btn" data-map-ctrl="measure" title="측정" aria-expanded="false" aria-haspopup="true"><i class="fa-solid fa-ruler-combined"></i></button>
+    <div class="map-ctrl-popover" role="menu" hidden>
+      <button type="button" class="map-ctrl-popover-item" data-measure="distance"><i class="fa-solid fa-ruler-horizontal"></i><span>거리</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-measure="area"><i class="fa-regular fa-square"></i><span>면적</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-measure="radius"><i class="fa-solid fa-bullseye"></i><span>반경</span></button>
+    </div>
+  </div>
+  <button type="button" class="map-ctrl-btn" data-map-ctrl="location" title="내 위치" aria-label="내 위치"><i class="fa-solid fa-location-crosshairs"></i></button>
+  <div class="map-ctrl-divider"></div>
+  <div class="map-ctrl-wrap map-ctrl-has-popover">
+    <button type="button" class="map-ctrl-btn" data-map-ctrl="more" title="더보기" aria-expanded="false" aria-haspopup="true"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    <div class="map-ctrl-popover" role="menu" hidden>
+      <button type="button" class="map-ctrl-popover-item" data-more="print"><i class="fa-solid fa-print"></i><span>인쇄</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-more="save"><i class="fa-regular fa-floppy-disk"></i><span>저장</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-more="roadview"><i class="fa-solid fa-camera"></i><span>로드뷰</span></button>
+      <button type="button" class="map-ctrl-popover-item" data-more="info"><i class="fa-solid fa-circle-info"></i><span>정보</span></button>
+    </div>
+  </div>
+  <button type="button" class="map-ctrl-btn" data-map-ctrl="fullscreen" title="전체화면" aria-label="전체화면"><i class="fa-solid fa-expand"></i></button>
+</div>
+
+          <div class="building-overlay" id="overlay-419" hidden>
+            <div class="building-overlay-header">
+              <span class="building-overlay-title">4.19기념관</span>
+              <button type="button" class="panel-left-close" data-overlay-close aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="building-overlay-body">
+              <p class="data-list-item-meta">건물 &gt; 공공문화시설</p>
+              <p class="building-address">도로명 경상북도 1234</p>
+              <p class="building-address">지번 경상북도 1234</p>
+              <div class="floor-tabs">
+                <button type="button" class="floor-tab active">B1</button>
+                <button type="button" class="floor-tab">1F</button>
+                <button type="button" class="floor-tab">2F</button>
+                <button type="button" class="floor-tab">3F</button>
+              </div>
+              <details class="accordion">
+                <summary>출입구정보 +</summary>
+                <p>출입구 안내 내용</p>
+              </details>
+              <p>층별안내</p>
+              <button type="button" class="btn-primary btn-sm btn-block">등록 안내</button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="app-footer">
+  <span class="footer-notice">※ 연속지적도를 포함한 모든 주제도는 참고용으로만 사용하시기 바랍니다.</span>
+  <button type="button" class="footer-help" title="도움말">?</button>
+</footer>
+
+    </div>
+  </body>
+</html>
